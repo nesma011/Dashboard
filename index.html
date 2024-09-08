@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  
+    <title>Dashboard</title>
+</head>
+<body>
+    <!--NavBar-->
+    <nav class="navbar navbar-dark bg-dark fixed-top mb-5">
+        <div class="container">
+          <a class="navbar-brand text-primary fs-2" href="#">Dashboard</a>
+
+
+          <nav class="navbar navbar-expand-lg bg-dark text-bg-white "  data-bs-theme="dark">
+            <div class="container">
+             
+              <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#calender">Calender</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#statistic">Statistic</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#e-commerce">E-commerce</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                  </li>
+
+                 
+                </ul>
+
+              </div>
+              <i class="fa-regular fa-bell text-white ps-5"></i>
+              <span class="count bg-danger text-white  rounded-circle px-1">2</span>
+
+              <i class="fa-solid fa-message text-white ps-5"></i>
+              <span class="count bg-success text-white  rounded-circle px-1">5</span>
+
+            </div>
+          </nav>
+
+          <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dashboard</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">UI Element</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Form Element</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   table
+                  </a>
+                  
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Company1</a></li>
+                    <li><a class="dropdown-item" href="#">Company2</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Company3</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Charts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Documentation</a>
+                  </li>
+              </ul>
+             
+            </div>
+          </div>
+         
+        </div>
+      </nav>
+
+
+      <!--calender-->
+   
+        <section class="calender bg-secondary-subtle" id="calender"> 
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-md-4   px-4">
+                        <div class="content bg-white rounded-5">
+                        <div class="row align-items-center">
+                            
+                                <div class="col-md-6 ">
+                                    <h1 class="h5 ps-5 pt-5 ">Sessions by Channel</h1>
+                                    <div id="donut_single" class="pe-5 "></div>
+                                </div>
+                                <div class="col-md-6">
+                                  <table class="mt-4">
+                                    <tr class="mb-2">
+                                        <td class="pb-2 pe-4">Firewalls(3)</td>
+                                        <td class="pb-2 pe-4">4(100%)</td>
+                                    </tr>
+                                    <tr class="mb-2">
+                                        <td class="pb-2 pe-4">Ports(12)</td>
+                                        <td class="pb-2 pe-4">12(100%)</td>
+                                    </tr>
+                                    <tr class="mb-2">
+                                        <td class="pb-2 pe-4">Servers(233)</td>
+                                        <td class="pb-2 pe-4">2(100%)</td>
+                                    </tr>
+                                    <tr class="mb-2">
+                                        <td class="pb-2 pe-4">Firewalls(3)</td>
+                                        <td class="pb-2 pe-4">7(100%)</td>
+                                    </tr>
+                                    <tr class="mb-2">
+                                        <td class="pb-2 pe-4">Firewalls(3)</td>
+                                        <td class="pb-2 pe-4">6(70%)</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                      
+                    <div class="col-md-4 bg-white px-4 rounded-5">
+                       <h4>Events</h4> 
+                       <div class="text d-flex justify-content-evenly py-3">
+                    <h6 class="text-primary">Critical</h6>
+                    <h6 class="text-danger">Error</h6>
+                       </div>
+                       <div id="chart_div"></div>
+                    </div>
+
+                   <div class="col-md-4 px-4">
+                    <div class="row g-4 ">
+                      <div class="col-md-6 px-2">
+                       <div class="contain bg-danger-subtle p-2 text-center rounded-4 ">
+                        <i class="fa-solid fa-user py-2 rounded-circle bg-danger p-2 text-white"></i>
+                        <h2 >50</h2>
+                        <p class="py-2 ">Customers</p>
+                        <h5 class="text-primary">Last day +0.5%</h5>
+                       </div>
+                      </div>
+                      <div class="col-md-6  px-2">
+                       <div class="contain bg-success-subtle p-2 text-center rounded-4">
+                        <i class="fa-solid fa-clipboard py-2 rounded-circle bg-danger p-2 text-white"></i>
+                           <h2 >5k$</h2>
+                        <p class="py-2 ">Total Sales</p>
+                        <h5 class="text-primary">Last day +0.5%</h5>
+                       </div>
+                      </div>
+                      <div class="col-md-6  px-2">
+                        <div class="contain bg-info-subtle p-2 text-center rounded-4">
+                          <i class="fa-solid fa-list py-2 rounded-circle bg-danger p-2 text-white"></i>
+                             <h2 >120</h2>
+                          <p class="py-2 ">Sold</p>
+                          <h5 class="text-primary">Last day +0.5%</h5>
+                         </div>
+                      </div>
+                      <div class="col-md-6  px-2">
+                        <div class="contain bg-warning-subtle p-2 text-center rounded-4">
+                          <i class="fa-solid fa-wand-magic-sparkles py-2 rounded-circle bg-danger p-2 text-white"></i>
+                           <h2 >300</h2>
+                          <p class="py-2 ">Total Order</p>
+                          <h5 class="text-primary">Last day +0.5%</h5>
+                         </div>
+                      </div>
+                    </div>
+                   </div>
+            </div>
+            </div>
+        </section>
+        
+   
+      <!--statistics-->
+     <section id="statistic" class="py-5 bg-secondary-subtle">
+<div class="container-fluid">
+<div class="row pt-5 ">
+    <div class="col-md-3 px-4">
+        <div class="inner bg-white px-5 rounded-5 pt-3">
+            <h4>Sessions by Channel</h4>
+            <table class="mt-4">
+                <tr class="text-secondary fw-bolder">
+                    <td class="pb-4">Empolyee Name</td>
+                    <td class="pb-4">This Month</td>
+                </tr>
+                <tr  class="mb-2">
+                    <td class="pb-2 fs-6 text-primary pe-4">Connor Chandler</td>
+                    <td class="pb-2 pe-4 text-secondary">$909</td>
+                </tr>
+                <tr class="mb-2">
+                    <td class="pb-2 fs-6 text-primary pe-4">Russell Floyd</td>
+                    <td class="pb-2 pe-4 text-secondary">$875</td>
+                </tr>
+                <tr class="mb-2">
+                    <td class="pb-2 fs-6 text-primary pe-4">Douglas White</td>
+                    <td class="pb-2 pe-4 text-secondary">$612</td>
+                </tr>
+                <tr class="mb-2">
+                    <td class="pb-2 fs-6 text-primary pe-4">Alta Fletcher</td>
+                    <td class="pb-2 pe-4 text-secondary">$233</td>
+                </tr>
+                <tr class="mb-2">
+                    <td class="pb-2 fs-6 text-primary pe-4">Marguerite Pearson
+                    </td>
+                    <td class="pb-2 pe-4 text-secondary">$233</td>
+                </tr>
+                <tr class="mb-2">
+                    <td class="pb-2 fs-6 text-primary pe-4">Leonard Gutierrez</td>
+                    <td class="pb-2 pe-4 text-secondary">$83</td>
+                </tr>
+                
+              </table>
+    </div>
+
+  
+</div>
+
+<div class="col-md-5 bg-white rounded-5">
+    <h4 class="p-3">Sales Analytics</h4>
+    <div id="curve_chart">
+        
+    </div>    
+</div>
+
+<div class="col-md-4 px-4 ">
+    <div class="inner bg-white rounded-5 p-3">
+        <h4 class=" text-primary">Total Earning</h4> 
+        <h6 class="fw-bolder"> 287,493$</h6>
+          <h6>1.4% Since Last Month</h6> 
+
+          <hr>
+          <h4 class=" text-primary">Total Earning</h4> 
+          <h6 class="fw-bolder"> 320,493$</h6>
+            <h6>2% Since This Month</h6> 
+
+            <div id="columnchart_material">
+
+            </div>
+
+    </div>
+
+    
+
+</div>
+</div>
+</div>
+     </section>
+
+
+     <!--e-commerce-->
+     
+<section id="E-commerce" class="py-5 bg-secondary-subtle">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 px-3">
+        <div class="contain  bg-white rounded-5 text-center">
+          <h1 class="h3 text-secondary">Sales Mapping by Country</h1>
+          <div id="regions_div" class="text-danger">
+       
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="col-md-6 bg-white rounded-5 px-3 d-flex flex-column justify-content-center align-items-center">
+        <h1 class="h3 text-secondary">WorldWide Branches</h1>
+
+<div id="sankey_multiple"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
